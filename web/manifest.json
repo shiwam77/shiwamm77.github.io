@@ -1,11 +1,11 @@
 {
-    "name": "school_admin",
-    "short_name": "school_admin",
+    "name": "school_admin_web",
+    "short_name": "school_admin_web",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "A new Flutter application.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

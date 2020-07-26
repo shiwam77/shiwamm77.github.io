@@ -3,18 +3,28 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
-"assets/FontManifest.json": "01700ba55b08a6141f33e168c4a6c22f",
+  "assets/AssetManifest.json": "3144c298fe83ba75d75178c27b4c9887",
+"assets/assets/fonts/roboto/Roboto-Bold.ttf": "e07df86cef2e721115583d61d1fb68a6",
+"assets/assets/fonts/roboto/Roboto-BoldItalic.ttf": "5b44818d2b9eda3e23cd5edd7b49b7d5",
+"assets/assets/fonts/roboto/Roboto-Light.ttf": "88823c2015ffd5fa89d567e17297a137",
+"assets/assets/fonts/roboto/Roboto-LightItalic.ttf": "a3ce4440f2abf76f4a1b14b83920138c",
+"assets/assets/fonts/roboto/Roboto-Medium.ttf": "58aef543c97bbaf6a9896e8484456d98",
+"assets/assets/fonts/roboto/Roboto-MediumItalic.ttf": "cf23e1bb619029496260760b72aebd30",
+"assets/assets/fonts/roboto/Roboto-Regular.ttf": "11eabca2251325cfc5589c9c6fb57b46",
+"assets/assets/fonts/roboto/Roboto-RegularItalic.ttf": "a720f17aa773e493a7ebf8b08459e66c",
+"assets/assets/Images/AppLogo.png": "6b10ea4097995e3d019452ef7a59085f",
+"assets/assets/Images/backgroundShapes.png": "493c32f82b448727aa74ac0aa5cd4ba2",
+"assets/FontManifest.json": "ff62bf75f3525dba0913a78b6e1f44e9",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"assets/NOTICES": "c18c599a9d7c7e35d8d687b3fe81f34e",
+"assets/NOTICES": "a03a03f5be0270ac6012a0ee44b121e8",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "9fcd49a9643794df29d2225b268e38ef",
-"/": "9fcd49a9643794df29d2225b268e38ef",
-"main.dart.js": "53af40d93ddd735e985e07b15f165325",
-"manifest.json": "736e2ba579198d1b0fdafa1182a34140"
+"index.html": "020868a3b5e8287151061d78d7bca8fe",
+"/": "020868a3b5e8287151061d78d7bca8fe",
+"main.dart.js": "897b4cb4ef997882772ea0593847e505",
+"manifest.json": "7a81d63f32fcdd81b6a6fe1a6826b478"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -23,7 +33,7 @@ const CORE = [
   "/",
 "main.dart.js",
 "index.html",
-"assets/NOTICES",
+"assets/LICENSE",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
 
@@ -105,7 +115,7 @@ self.addEventListener("fetch", (event) => {
   if (event.request.url == origin || event.request.url.startsWith(origin + '/#')) {
     key = '/';
   }
-  // If the URL is not the RESOURCE list, skip the cache.
+  // If the URL is not the the RESOURCE list, skip the cache.
   if (!RESOURCES[key]) {
     return event.respondWith(fetch(event.request));
   }
@@ -128,11 +138,11 @@ self.addEventListener("fetch", (event) => {
 self.addEventListener('message', (event) => {
   // SkipWaiting can be used to immediately activate a waiting service worker.
   // This will also require a page refresh triggered by the main worker.
-  if (event.data === 'skipWaiting') {
+  if (event.message == 'skipWaiting') {
     return self.skipWaiting();
   }
 
-  if (event.message === 'downloadOffline') {
+  if (event.message = 'downloadOffline') {
     downloadOffline();
   }
 });
@@ -152,8 +162,8 @@ async function downloadOffline() {
   }
   for (var resourceKey in Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
-      resources.push(resourceKey);
+      resources.add(resourceKey);
     }
   }
-  return contentCache.addAll(resources);
+  return Cache.addAll(resources);
 }
