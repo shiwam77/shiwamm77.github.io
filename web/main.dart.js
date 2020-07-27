@@ -43828,7 +43828,7 @@ Y.aM(new N.dz())
 Y.aM(new N.dz())
 return new Z.A7(new Z.JV(H.b([new Z.e0("2013"),new Z.e0("2014"),new Z.e0("2015"),new Z.e0("2016"),new Z.e0("2017"),new Z.e0("2018"),new Z.e0("2019"),new Z.e0("2020")],u.o5)),F.Yr(),D.YB(),C.n)}}
 Z.A7.prototype={
-W:function(a){var t,s,r,q,p=this,o=null,n=4294928232,m=4294967295,l=$.Yx,k=$.Yw,j=M.c7(o,U.J_("assets/Images/backgroundhapes.png",C.kE),C.oh,o,k,o,o,l),i=u.t,h=T.v5(H.b([M.c7(o,U.J_("assets/Images/applogo.png",o),o,o,200,o,o,200)],i),C.ie,o),g=T.dU(H.b([T.Xl(L.eE("Academic Year",1,C.hJ,o,!1,A.cH(o,o,new P.C(n),o,o,o,o,o,o,o,o,50,o,C.ax,o,o,!0,o,o,o,o,o,o),o),C.kF)],i),C.aN),f=new P.aG(32,32)
+W:function(a){var t,s,r,q,p=this,o=null,n=4294928232,m=4294967295,l=$.Yx,k=$.Yw,j=M.c7(o,U.J_("assets/Images/backgroundhapes.png",C.kE),C.oh,o,k,o,o,l),i=u.t,h=T.v5(H.b([M.c7(o,U.J_("assets/Images/applogo.png",o),o,o,200,o,o,200)],i),C.ie,o),g=T.dU(H.b([T.Xl(L.eE("Academic Year",1,C.hJ,o,!1,A.cH(o,o,new P.C(n),o,o,o,o,o,o,o,o,45,o,C.ax,o,o,!0,o,o,o,o,o,o),o),C.kF)],i),C.aN),f=new P.aG(32,32)
 f=S.hv(o,new K.aV(f,f,f,f),o,new P.C(m),o,o,C.X)
 t=new P.aG(32,32)
 f=M.c7(o,new T.bA(o,o,Z.Vr(p.f,L.Jr(o,new F.dp(4,new K.aV(t,t,t,t),C.r),C.kY,o,o,o,o,!0,o,o,o,o,o,o,o,C.fp,o,o,o,!0,o,o,o,o,A.cH(o,o,o,o,o,o,o,o,o,o,o,20,o,o,o,o,!0,o,o,o,o,o,o),"Enter academic year",o,o,!1,o,o,o,o,o,o,o,o,o,o,o,o,o,o),!0,new Z.OR(p),new Z.OS()),o),o,f,o,o,o,o)
@@ -43878,7 +43878,7 @@ t=$.Yx=q.a
 q=$.Yw=q.b
 s=u.t
 return M.V5(C.aw,T.zm(H.b([M.c7(r,U.J_("assets/Images/backgroundhapes.png",C.kE),C.oh,r,q,r,r,t),M.c7(r,T.dU(H.b([new T.eY(1,C.b7,T.dU(H.b([M.c7(r,U.J_("assets/Images/applogo.png",r),r,r,350,r,r,650)],s),C.aN),r),new T.eY(1,C.b7,T.dU(H.b([this.Gn()],s),C.aN),r)],s),C.aN),r,r,q,r,r,t)],s),C.hG),C.b6,r,0,r,r,C.dl)},
-Gn:function(){var t,s,r,q=null,p=4294928232,o=4294967295,n=u.t,m=T.dU(H.b([T.Xl(L.eE("Admin Login",1,C.hJ,q,!1,A.cH(q,q,new P.C(p),q,q,q,q,q,q,q,q,75,q,C.ax,q,q,!0,0.2,q,q,q,q,q),q),C.kF)],n),C.aN),l=new P.aG(32,32)
+Gn:function(){var t,s,r,q=null,p=4294928232,o=4294967295,n=u.t,m=T.dU(H.b([T.Xl(L.eE("Admin Login",1,C.hJ,q,!1,A.cH(q,q,new P.C(p),q,q,q,q,q,q,q,q,70,q,C.ax,q,q,!0,0.2,q,q,q,q,q),q),C.kF)],n),C.aN),l=new P.aG(32,32)
 l=S.hv(q,new K.aV(l,l,l,l),q,new P.C(o),q,q,C.X)
 t=new P.aG(32,32)
 l=M.c7(q,new T.bA(q,55,Z.Vr(q,L.Jr(q,new F.dp(4,new K.aV(t,t,t,t),C.r),C.kY,q,q,q,q,!0,q,q,q,q,q,q,q,C.fp,q,q,q,!0,q,q,q,q,A.cH(q,q,q,q,q,q,q,q,q,q,q,20,q,q,q,q,!0,q,q,q,q,q,q),"username",q,q,!1,q,q,q,q,q,q,q,q,q,q,q,q,q,q),!0,new Z.Sa(),q),q),q,l,q,q,q,q)
