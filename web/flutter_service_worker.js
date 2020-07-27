@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "616059ff2e9653044930c45963290957",
+  "assets/AssetManifest.json": "ff8aa35597fe2f0486769c8eb416abf0",
 "assets/Assets/fonts/roboto/Roboto-Bold.ttf": "e07df86cef2e721115583d61d1fb68a6",
 "assets/Assets/fonts/roboto/Roboto-BoldItalic.ttf": "5b44818d2b9eda3e23cd5edd7b49b7d5",
 "assets/Assets/fonts/roboto/Roboto-Light.ttf": "88823c2015ffd5fa89d567e17297a137",
@@ -12,8 +12,6 @@ const RESOURCES = {
 "assets/Assets/fonts/roboto/Roboto-MediumItalic.ttf": "cf23e1bb619029496260760b72aebd30",
 "assets/Assets/fonts/roboto/Roboto-Regular.ttf": "11eabca2251325cfc5589c9c6fb57b46",
 "assets/Assets/fonts/roboto/Roboto-RegularItalic.ttf": "a720f17aa773e493a7ebf8b08459e66c",
-"assets/Assets/Images/applogo.png": "6b10ea4097995e3d019452ef7a59085f",
-"assets/Assets/Images/backgroundhapes.png": "493c32f82b448727aa74ac0aa5cd4ba2",
 "assets/FontManifest.json": "ff62bf75f3525dba0913a78b6e1f44e9",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
 "assets/NOTICES": "a03a03f5be0270ac6012a0ee44b121e8",
@@ -23,7 +21,7 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "index.html": "020868a3b5e8287151061d78d7bca8fe",
 "/": "020868a3b5e8287151061d78d7bca8fe",
-"main.dart.js": "9cbac6efac3a28fffbaad5419c45dfcf",
+"main.dart.js": "15f1edb166f13f3af7f2c931dc4ec250",
 "manifest.json": "7a81d63f32fcdd81b6a6fe1a6826b478"
 };
 
