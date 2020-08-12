@@ -17,14 +17,14 @@ const RESOURCES = {
 "assets/Assets/images/HomePageLogo.png": "912bc26704b5998904b20ebd94147c4f",
 "assets/FontManifest.json": "ff62bf75f3525dba0913a78b6e1f44e9",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"assets/NOTICES": "517c05effc5c4b2622243b5a20f5061a",
+"assets/NOTICES": "500bf7edced4b1a2d6f5b88cf1f4609b",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "020868a3b5e8287151061d78d7bca8fe",
-"/": "020868a3b5e8287151061d78d7bca8fe",
-"main.dart.js": "a66d1d2d8a2518d8cf0947a498e93025",
+"index.html": "2473902b14757a3c4c310fae765dddef",
+"/": "2473902b14757a3c4c310fae765dddef",
+"main.dart.js": "8574a31748c583b2c76c5bd350333fb6",
 "manifest.json": "7a81d63f32fcdd81b6a6fe1a6826b478"
 };
 
@@ -34,7 +34,7 @@ const CORE = [
   "/",
 "main.dart.js",
 "index.html",
-"assets/LICENSE",
+"assets/NOTICES",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
 
@@ -116,7 +116,7 @@ self.addEventListener("fetch", (event) => {
   if (event.request.url == origin || event.request.url.startsWith(origin + '/#')) {
     key = '/';
   }
-  // If the URL is not the the RESOURCE list, skip the cache.
+  // If the URL is not the RESOURCE list, skip the cache.
   if (!RESOURCES[key]) {
     return event.respondWith(fetch(event.request));
   }
@@ -139,11 +139,11 @@ self.addEventListener("fetch", (event) => {
 self.addEventListener('message', (event) => {
   // SkipWaiting can be used to immediately activate a waiting service worker.
   // This will also require a page refresh triggered by the main worker.
-  if (event.message == 'skipWaiting') {
+  if (event.data === 'skipWaiting') {
     return self.skipWaiting();
   }
 
-  if (event.message = 'downloadOffline') {
+  if (event.message === 'downloadOffline') {
     downloadOffline();
   }
 });
@@ -163,8 +163,8 @@ async function downloadOffline() {
   }
   for (var resourceKey in Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
-      resources.add(resourceKey);
+      resources.push(resourceKey);
     }
   }
-  return Cache.addAll(resources);
+  return contentCache.addAll(resources);
 }
